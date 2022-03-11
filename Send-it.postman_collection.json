@@ -210,6 +210,61 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "updateuser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n        \"id\": \"6\",\r\n        \"username\": \"stev\",\r\n        \"fullname\": \"domin m\",\r\n        \"phonenumber\": \"+254714255572\",\r\n        \"email\": \"nadomin@gmail.com\",\r\n        \"password\": \"domin000pp\",\r\n        \"isadmin\": 0,\r\n        \"isdeleted\": 0,\r\n        \"issent\": 0\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateparcel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"id\": \"4\",\r\n        \"description\": \"iant\",\r\n        \"sender_number\": \"+254734534599\",\r\n        \"receiver_number\": \"+254789100901\",\r\n        \"start_location\": \"dekut\",\r\n        \"end_location\": \"nakuru\",\r\n        \"isdeleted\": 0,\r\n        \"isupdated\": 0,\r\n        \"issent\": 0,\r\n        \"isdelivered\": 0,\r\n        \"current_location\": \"nyerit\",\r\n        \"sender_id\": \"1\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/parcel/5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"parcel",
+						"5"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
