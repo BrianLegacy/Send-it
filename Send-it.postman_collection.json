@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "883130e8-1262-45cc-aa80-dc811ac45246",
+		"name": "Send-it",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Getusers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Createuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n        \"id\": \"2\",\r\n        \"username\": \"ian\",\r\n        \"fullname\": \"ian\",\r\n        \"phonenumber\": \"+254714299972\",\r\n        \"email\": \"nai@gmail.com\",\r\n        \"password\": \"ian000\",\r\n        \"isadmin\": 1,\r\n        \"isdeleted\": 0,\r\n        \"issent\": 0\r\n }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Createparcel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"1\", \r\n\"description\":\"gfdsa\", \r\n\"sender_number\":\"+254734567890\", \r\n\"receiver_number\":\"+254789000001\",\r\n\"start_location\":\"nyeri\" , \r\n\"end_location\":\"nairobi\" ,  \r\n\"isdeleted\":1 ,\r\n\"isupdated\":0 ,\r\n\"issent\":0,\r\n\"isdelivered\":0 ,\r\n\"current_location\":\"nyeri\" ,\r\n\"sender_id\":\"1\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/parcel",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"parcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetParcel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/parcel",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"parcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getaparcel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/parcel/2",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"parcel",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getuserparcels",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/parcel",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"parcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel/deleteparcel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isdeleted\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/parcel/2",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"parcel",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\": \"nai@gmail.com\",\r\n        \"password\": \"ian000\"\r\n\r\n }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
